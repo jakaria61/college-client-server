@@ -1,0 +1,17 @@
+.slide-bg1{
+    background-image: url('../../../image/cam.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.slide-text{
+    padding-left: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.slide-text h1{
+    font-family: 'sans-serif';
+    font-size: 3rem;
+    color: rgb(28, 22, 87);
+}
