@@ -3,9 +3,9 @@ import './Dashboard.css'
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const Dashboard = () => {
-    const [studentData, setStudnetData] = useState({});
-    const navigate=useNavigate();
-  
+    const [ studentData, setStudnetData ] = useState({});
+    const navigate = useNavigate();
+
     useEffect(() => {
 
         fetch(`http://localhost:5000/student-info`, {
@@ -16,18 +16,17 @@ const Dashboard = () => {
 
     }, []);
 
-  
+
 
     return (
 
-        <section className="container py-5 ">
-            <h1 className='text-center text-success'>Well come {studentData.fristName} {studentData.lastName}</h1>
-            
-        
+        <section className="container py-5 dashboard-container">
+            <h1 className='text-center text-success'>Welcome {studentData.fristName} {studentData.lastName}</h1>
+
+
             <table className='mt-5'>
                 <tr>
-                    <th>FristName</th>
-                    <th>LastName</th>
+                    <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Birth</th>
@@ -36,10 +35,10 @@ const Dashboard = () => {
                     <th>Session</th>
                     <th>Gender</th>
                     <th>Country</th>
+
                 </tr>
                 <tr>
-                    <td><p>{studentData.fristName}</p></td>
-                    <td><p>{studentData.lastName}</p> </td>
+                    <td><p>{studentData.fristName} {studentData.lastName}</p></td>
                     <td><p>{studentData.email}</p></td>
                     <td><p>{studentData.phone}</p></td>
                     <td><p>{studentData.dob}</p></td>
@@ -48,11 +47,12 @@ const Dashboard = () => {
                     <td><p>{studentData.session}</p></td>
                     <td><p>{studentData.gender}</p></td>
                     <td><p>{studentData.country}</p></td>
+
                 </tr>
             </table>
             <div className='text-center mt-5'>
-            <button className='btn btn-outline-success' ><Link to='/Balance'>Click to show your Due money</Link></button>
-           
+                <button className='btn btn-outline-success' ><Link to={`/Balance/${studentData._id}`}>Click to show your Due money</Link></button>
+
             </div>
 
         </section>

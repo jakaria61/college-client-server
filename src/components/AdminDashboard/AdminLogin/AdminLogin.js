@@ -1,12 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import admin from '../../../image/student.jpg';
 import { useForm } from 'react-hook-form';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const AdminLogin = () => {
+    const [token , setToken] = useState('');
+    const [error, setError] = useState({});
+    const [uemail,setuemail]=useState({});
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const handleLogin=(event)=>{
-        event.preventDefault();
-    }
+    const navigate = useNavigate();
+    const handleLogin =async(data)=>{
+        fetch('http://localhost:5000/adminLogin', {
+            method: 'POST',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setError(data)
+                setuemail(data);
+                if(data.token){
+                    localStorage.setItem("token", data.token);
+                    setToken(localStorage.getItem('token'))
+                    
+                    navigate("/adminDashboard")
+                }
+            })
+            .catch(err => console.log(err))
+    } 
+console.log(error)
     return (
         <section className="login-form-control m-5">
                 <div className="row w-100 ">

@@ -1,0 +1,35 @@
+.roleshow{
+    text-decoration: none;
+    padding:20px;
+    border-radius:10px;
+    margin: 15px;
+    background-color:#eee;
+
+}
+.roleshow:hover{
+    background-color:rgba(189, 243, 187, 0.767);
+    color: white;
+    
+}
+.details-container{
+    background-color: white;
+    border-radius: 18px;
+}
+.card-design{
+    text-decoration: none;
+    padding:20px;
+    margin-left: 50%;
+    border-radius:10px;
+    margin: 15px;
+    background-color:white;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+.payment-result-card{
+    text-align: center;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 18px;
+    padding:20px;
+}

@@ -96,18 +96,19 @@ const Registration = () => {
             <h1 className='text-center'>Student Registration</h1>
             <p className='text-center text-danger '>Enter your valid information</p>
             <div className="row">
-                <div className=" mb-3  col-md-4">
-                    <label for="floatingInput" className="mt-4">Enter Your Name <small className="star-color">*</small></label>
-                    <input type="Text" name="fristName" className="form-control" id="floatingInput" placeholder="Frist Name"
-                        />
-                     
-                </div>
-                <div className=" mt-4 col-md-4 ">
+            <div className=" mt-4 col-md-4 ">
                     <label for="floatingInput" className="">Last Name <small className="star-color">*</small></label>
                     <input type="Text" name="lastName" className="form-control" id="floatingInput" placeholder="Last Name"
                         />
                         
                 </div>
+                <div className=" mb-3  col-md-4">
+                    <label for="floatingInput" className="mt-4">Enter frist Name <small className="star-color">*</small></label>
+                    <input type="Text" name="fristName" className="form-control" id="floatingInput" placeholder="Frist Name"
+                        />
+                     
+                </div>
+               
                 <div className=" mt-4 col-md-4 ">
                     <label for="floatingInput" className="">Student Id<small className="star-color">*</small></label>
                     <input type="number" name="studentId" className="form-control" id="floatingInput" placeholder="Ex-1838520107"
@@ -153,7 +154,7 @@ const Registration = () => {
                 </div>
                 <div className=" mb-3 col-md-4">
                     <label for="floatingInput" className="mb-1">Session <small className="star-color">*</small></label>
-                    <input type="number" name="session" className="form-control" id="floatingInput"
+                    <input type="text" name="session" className="form-control" id="floatingInput"
                         placeholder="i.e 2017-18" required/>
 
                 </div>

@@ -1,15 +1,22 @@
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  td, th {
-    border: 1px solid #0a0a0a;
-    text-align: center;
-    
-  }
-  
-  tr:nth-child(even) {
-    background-color: #b9cab367;
-  }
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #0a0a0a;
+  text-align: center;
+
+}
+
+tr:nth-child(even) {
+  background-color: #b9cab367;
+}
+
+.dashboard-container {
+  background-color: white;
+  margin-top: 40px;
+  border-radius: 18px;
+}
